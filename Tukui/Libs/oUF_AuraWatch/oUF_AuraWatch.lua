@@ -216,7 +216,7 @@ local function Update(frame, event, unit)
             end
         else
             if watch.strictMatching then
-                key = spellID
+                key = spellid
             else
                 key = name..texture
             end

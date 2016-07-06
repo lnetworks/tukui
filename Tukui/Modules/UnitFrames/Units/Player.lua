@@ -324,7 +324,7 @@ function TukuiUnitFrames:Player()
         self.Totems = Bar
     end
     
-    if (C.UnitFrames.ComboBar) then
+    if (C.UnitFrames.ComboBar) and (Class == "ROGUE" or Class == "DRUID") then
         local ComboPoints = CreateFrame("Frame", self:GetName()..'ComboPointsBar', self)
         ComboPoints:SetFrameStrata(self:GetFrameStrata())
         ComboPoints:Point("BOTTOMLEFT", self, "TOPLEFT", 0, 1)

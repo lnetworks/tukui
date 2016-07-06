@@ -271,7 +271,7 @@ local SetSelectedValue = function(dropdown, value)
 
     if dropdown[value] then
         if (dropdown.Type == "Texture") then
-            dropdown.CurrentTex:SetColorTexture(dropdown[value])
+            dropdown.CurrentTex:SetTexture(dropdown[value])
         elseif (dropdown.Type == "Font") then
             dropdown.Current:SetFontObject(dropdown[value])
         end
@@ -297,7 +297,7 @@ local ListItemOnClick = function(self)
     local DropDown = List.Owner
 
     if (DropDown.Type == "Texture") then
-        DropDown.CurrentTex:SetColorTexture(self.Value)
+        DropDown.CurrentTex:SetTexture(self.Value)
     elseif (DropDown.Type == "Font") then
         DropDown.Current:SetFontObject(self.Value)
     else
@@ -352,7 +352,7 @@ local AddListItems = function(self, info)
         if (Type == "Texture") then
             local Bar = self:CreateTexture(nil, "ARTWORK")
             Bar:SetAllPoints(Button)
-            Bar:SetColorTexture(Value)
+            Bar:SetTexture(Value)
             Bar:SetVertexColor(Colors.r, Colors.g, Colors.b)
 
             Button.Bar = Bar

@@ -49,8 +49,8 @@ local Update = function(self, event, unit, powerType)
 end
 
 local SetMaxCombo = function(self)
-    local Anticipation = IsSpellKnown(114015)
-    local Deeper = IsSpellKnown(193531)
+    local Anticipation = select(4, GetTalentInfo(3, 2, 1))
+    local Deeper = select(4, GetTalentInfo(3, 1, 1))
     local cpb = self.ComboPointsBar
 
     if Anticipation then

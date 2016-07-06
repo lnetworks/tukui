@@ -619,6 +619,7 @@ function TukuiUnitFrames:CreateAuraWatch(frame)
     Auras.missingAlpha = 0
     Auras.icons = {}
     Auras.PostCreateIcon = TukuiUnitFrames.CreateAuraWatchIcon
+    Auras.strictMatching = true
 
     if (not C["Raid"].AuraWatchTimers) then
         Auras.hideCooldown = true

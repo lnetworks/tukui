@@ -333,6 +333,11 @@ TukuiConfig["esMX"] = {
             ["Name"] = "Enable Auto Invites",
             ["Desc"] = "Automatically accept group invites from friends, and guild members.",
         },
+        
+        ["TalkingHeadEnable"] = {
+            ["Name"] = "Enable Talking Head",
+            ["Desc"] = "Display Blizzard Talking Head Frame.",
+        },
     },
 
     ["NamePlates"] = {
@@ -356,16 +361,6 @@ TukuiConfig["esMX"] = {
             ["Desc"] = "Set the height of the cast bar on NamePlates",
         },
 
-        ["Spacing"] = {
-            ["Name"] = "Spacing",
-            ["Desc"] = "Set the spacing between NamePlates and cast bar",
-        },
-
-        ["NonTargetAlpha"] = {
-            ["Name"] = "Non-Target Alpha",
-            ["Desc"] = "The alpha of NamePlates that we're not targetting",
-        },
-
         ["Texture"] = {
             ["Name"] = "NamePlates Texture",
             ["Desc"] = "Set a texture for nameplates",
@@ -374,16 +369,6 @@ TukuiConfig["esMX"] = {
         ["Font"] = {
             ["Name"] = "NamePlates Font",
             ["Desc"] = "Set a font for nameplates",
-        },
-
-        ["HealthText"] = {
-            ["Name"] = "Show Health Text",
-            ["Desc"] = "Add a text in the nameplate which show current health",
-        },
-
-        ["NameTextColor"] = {
-            ["Name"] = "Color Name Text",
-            ["Desc"] = "Colors Name Text instead of Statusbars for Party/Raid Members.",
         },
     },
 

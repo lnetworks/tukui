@@ -338,6 +338,11 @@ TukuiConfig["frFR"] = {
             ["Name"] = "Enable Auto Invites",
             ["Desc"] = "Automatically accept group invites from friends, and guild members.",
         },
+        
+        ["TalkingHeadEnable"] = {
+            ["Name"] = "Enable Talking Head",
+            ["Desc"] = "Display Blizzard Talking Head Frame.",
+        },
     },
 
     ["NamePlates"] = {
@@ -361,16 +366,6 @@ TukuiConfig["frFR"] = {
             ["Desc"] = "Définir la hauteur de la barre de incantation des barres d'unités",
         },
 
-        ["Spacing"] = {
-            ["Name"] = "Espacement",
-            ["Desc"] = "Définir l'espacement entre la barre d'unité et la barre de incantation",
-        },
-
-        ["NonTargetAlpha"] = {
-            ["Name"] = "Opacité non-ciblé",
-            ["Desc"] = "Opcaité des barres d'unités qui ne sont pas ciblées",
-        },
-
         ["Texture"] = {
             ["Name"] = "Texture des barres d'unités",
             ["Desc"] = "Définir une texture pour les barres d'unités",
@@ -379,16 +374,6 @@ TukuiConfig["frFR"] = {
         ["Font"] = {
             ["Name"] = "Police de caractère",
             ["Desc"] = "Définir la police de caractère des barres d'unités",
-        },
-
-        ["HealthText"] = {
-            ["Name"] = "Show Health Text",
-            ["Desc"] = "Add a text in the nameplate which show current health",
-        },
-
-        ["NameTextColor"] = {
-            ["Name"] = "Color Name Text",
-            ["Desc"] = "Colors Name Text instead of Statusbars for Party/Raid Members.",
         },
     },
 

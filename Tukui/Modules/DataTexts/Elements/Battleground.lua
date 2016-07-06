@@ -126,6 +126,7 @@ function BGFrame:Enable()
     BGFrame:SetAllPoints(DataTextLeft)
     BGFrame:SetTemplate()
     BGFrame:SetFrameLevel(4)
+    BGFrame:SetFrameStrata("BACKGROUND")
 
     local Text1 = BGFrame:CreateFontString(nil, "OVERLAY")
     Text1:SetFontObject(DataText.Font)

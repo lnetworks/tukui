@@ -178,14 +178,14 @@ local talentTbl = ({
         DRUID_RESTO = 'Magic',
     },
     MONK = {
-        MONK_MIST = 'Magic',
+        MONK_WIND = 'Magic',
     }
 })[PLAYER_CLASS]
 
 local spellCheck = function()
     local spec = GetSpecialization()
     local id = spec and GetSpecializationInfo(spec)
-    local specText = id and SPEC_CORE_ABILITY_TEXT[id]
+    local specText = id and SPEC_CORE_ABILITY_TEXT and SPEC_CORE_ABILITY_TEXT[id]
     if(specText and talentTbl) then
         for key, disp in next, talentTbl do
             dispelFilter[disp] = key == specText

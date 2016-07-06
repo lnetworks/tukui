@@ -338,6 +338,11 @@ TukuiConfig["ruRU"] = {
             ["Name"] = "Enable Auto Invites",
             ["Desc"] = "Automatically accept group invites from friends, and guild members.",
         },
+        
+        ["TalkingHeadEnable"] = {
+            ["Name"] = "Enable Talking Head",
+            ["Desc"] = "Display Blizzard Talking Head Frame.",
+        },
     },
 
     ["NamePlates"] = {
@@ -361,16 +366,6 @@ TukuiConfig["ruRU"] = {
             ["Desc"] = "Установить высоту полосы заклинаний на индикаторах здоровья",
         },
 
-        ["Spacing"] = {
-            ["Name"] = "Отступ",
-            ["Desc"] = "Установить расстояние между индикатором здоровья и полосой заклинаний",
-        },
-
-        ["NonTargetAlpha"] = {
-            ["Name"] = "Прозначность не целей",
-            ["Desc"] = "Степень видимости индикаторов здоровья, не принадлижащих текущей цели",
-        },
-
         ["Texture"] = {
             ["Name"] = "Текстура индикаторов здоровья",
             ["Desc"] = "Установить текстуру для индикаторов здоровья",
@@ -379,16 +374,6 @@ TukuiConfig["ruRU"] = {
         ["Font"] = {
             ["Name"] = "Шрифт индикатора здоровья",
             ["Desc"] = "Установить шрифт для индикаторов здоровья",
-        },
-
-        ["HealthText"] = {
-            ["Name"] = "Show Health Text",
-            ["Desc"] = "Add a text in the nameplate which show current health",
-        },
-
-        ["NameTextColor"] = {
-            ["Name"] = "Color Name Text",
-            ["Desc"] = "Colors Name Text instead of Statusbars for Party/Raid Members.",
         },
     },
 

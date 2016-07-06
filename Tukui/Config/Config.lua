@@ -91,20 +91,16 @@ C["Misc"] = {
     ["ReputationEnable"] = true,
     ["ErrorFilterEnable"] = true,
     ["AutoInviteEnable"] = false,
+    ["TalkingHeadEnable"] = true,
 }
 
 C["NamePlates"] = {
-    -- NEED CLEANUP WHEN COMPLETE
     ["Enable"] = true,
-    ["HealthText"] = false,
     ["Width"] = 150,
     ["Height"] = 6,
     ["CastHeight"] = 4,
-    ["Spacing"] = 4,
-    ["NonTargetAlpha"] = .5,
     ["Texture"] = "Tukui",
     ["Font"] = "Tukui Outline",
-    ["NameTextColor"] = true,
 }
 
 C["Party"] = {

@@ -337,6 +337,11 @@ TukuiConfig["zhTW"] = {
             ["Name"] = "Enable Auto Invites",
             ["Desc"] = "Automatically accept group invites from friends, and guild members.",
         },
+        
+        ["TalkingHeadEnable"] = {
+            ["Name"] = "Enable Talking Head",
+            ["Desc"] = "Display Blizzard Talking Head Frame.",
+        },
     },
 
     ["NamePlates"] = {
@@ -360,16 +365,6 @@ TukuiConfig["zhTW"] = {
             ["Desc"] = "設置姓名板施法條高度",
         },
 
-        ["Spacing"] = {
-            ["Name"] = "間距",
-            ["Desc"] = "設置姓名板間距",
-        },
-
-        ["NonTargetAlpha"] = {
-            ["Name"] = "非目標淡出",
-            ["Desc"] = "非當前目標的姓名板透明度",
-        },
-
         ["Texture"] = {
             ["Name"] = "姓名板材質",
             ["Desc"] = "設置姓名板材質",
@@ -378,15 +373,6 @@ TukuiConfig["zhTW"] = {
         ["Font"] = {
             ["Name"] = "姓名板字體",
             ["Desc"] = "設置姓名板字體",
-        },
-         ["HealthText"] = {
-            ["Name"] = "血量文字",
-            ["Desc"] = "在姓名板上顯示血量的具體數值.",
-        },
-
-        ["NameTextColor"] = {
-            ["Name"] = "Color Name Text",
-            ["Desc"] = "Colors Name Text instead of Statusbars for Party/Raid Members.",
         },
     },
     ["Party"] = {

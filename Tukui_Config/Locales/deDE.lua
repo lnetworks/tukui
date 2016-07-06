@@ -338,6 +338,11 @@ TukuiConfig["deDE"] = {
             ["Name"] = "Enable Auto Invites",
             ["Desc"] = "Automatically accept group invites from friends, and guild members.",
         },
+        
+        ["TalkingHeadEnable"] = {
+            ["Name"] = "Enable Talking Head",
+            ["Desc"] = "Display Blizzard Talking Head Frame.",
+        },
     },
 
     ["NamePlates"] = {
@@ -361,16 +366,6 @@ TukuiConfig["deDE"] = {
             ["Desc"] = "Legt die Höhe der Zauberleisten an den Namensplaketten fest",
         },
 
-        ["Spacing"] = {
-            ["Name"] = "Abstände",
-            ["Desc"] = "Legt die Abstände zwischen den Namensplaketten und der Zauberleiste fest",
-        },
-
-        ["NonTargetAlpha"] = {
-            ["Name"] = "Kein Ziel Alpha",
-            ["Desc"] = "Der Alphawert von den Namensplaketten die nicht als Ziel sind",
-        },
-
         ["Texture"] = {
             ["Name"] = "Namensplaketten Texture",
             ["Desc"] = "Legt die Texture für die Namensplaketten fest",
@@ -379,16 +374,6 @@ TukuiConfig["deDE"] = {
         ["Font"] = {
             ["Name"] = "Namensplaketten Schriftart",
             ["Desc"] = "Legt die Schriftart der Namensplaketten fest",
-        },
-
-        ["HealthText"] = {
-            ["Name"] = "Show Health Text",
-            ["Desc"] = "Add a text in the nameplate which show current health",
-        },
-
-        ["NameTextColor"] = {
-            ["Name"] = "Color Name Text",
-            ["Desc"] = "Colors Name Text instead of Statusbars for Party/Raid Members.",
         },
     },
 

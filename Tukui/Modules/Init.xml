@@ -51,6 +51,7 @@
     <Script file="Miscellaneous\Ghost.lua"/>
     <Script file="Miscellaneous\VehicleIndicator.lua"/>
     <Script file="Miscellaneous\Invite.lua"/>
+    <Script file="Miscellaneous\TalkingHead.lua"/>
 
     <!-- Auras -->
     <Include file="Auras\Templates.xml"/>

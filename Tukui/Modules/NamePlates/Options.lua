@@ -19,8 +19,8 @@ function Plates:RegisterOptions()
         colorHealthBySelection = true,
         considerSelectionInCombatAsHostile = true,
         smoothHealthUpdates = false,
-        displayNameWhenSelected = true,
-        displayNameByPlayerNameRules = true,
+        displayNameWhenSelected = false,
+        displayNameByPlayerNameRules = false,
 
         selectedBorderColor = CreateColor(1, 1, 1, .35),
         tankBorderColor = CreateColor(1, 1, 0, .6),
@@ -38,8 +38,8 @@ function Plates:RegisterOptions()
         colorHealthBySelection = true,
         considerSelectionInCombatAsHostile = true,
         smoothHealthUpdates = false,
-        displayNameWhenSelected = true,
-        displayNameByPlayerNameRules = true,
+        displayNameWhenSelected = false,
+        displayNameByPlayerNameRules = false,
         greyOutWhenTapDenied = true,
 
         selectedBorderColor = CreateColor(1, 1, 1, .55),

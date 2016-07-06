@@ -3,7 +3,6 @@ local T, C, L = select(2, ...):unpack()
 --[[
 C["NamePlates"] = {
     ["Enable"] = true,
-    ["HealthText"] = false,
     ["Width"] = 150,
     ["Height"] = 6,
     ["CastHeight"] = 4,
@@ -85,16 +84,19 @@ function Plates:SetupPlate(options)
     local Flash = self.castBar.Flash
     local Spark = self.castBar.Spark
     local Name = self.name
+    local Texture = T.GetTexture(C["NamePlates"].Texture)
+    local Font = T.GetFont(C["NamePlates"].Font)
+    local FontName, FontSize, FontFlags = _G[Font]:GetFont()
 
     -- HEALTHBAR
-    HealthBar:SetStatusBarTexture(C.Medias.Normal)
+    HealthBar:SetStatusBarTexture(Texture)
     HealthBar.background:ClearAllPoints()
     HealthBar.background:SetInside(0, 0)
     HealthBar:CreateShadow()
     HealthBar.border:SetAlpha(0)
 
     -- CASTBAR
-    CastBar:SetStatusBarTexture(C.Medias.Normal)
+    CastBar:SetStatusBarTexture(Texture)
     CastBar.background:ClearAllPoints()
     CastBar.background:SetInside(0, 0)
     CastBar:CreateShadow()
@@ -121,7 +123,7 @@ function Plates:SetupPlate(options)
     CastBar.Icon.ClearAllPoints = Noop
     CastBar.Icon.SetPoint = Noop
 
-    CastBar.Text:SetFont(C.Medias.Font, 9, "OUTLINE")
+    CastBar.Text:SetFont(FontName, 9, "OUTLINE")
     
     CastBar.startCastColor.r, CastBar.startCastColor.g, CastBar.startCastColor.b = unpack(Plates.Options.CastBarColors.StartNormal)
     CastBar.startChannelColor.r, CastBar.startChannelColor.g, CastBar.startChannelColor.b = unpack(Plates.Options.CastBarColors.StartChannel)
@@ -132,7 +134,7 @@ function Plates:SetupPlate(options)
     hooksecurefunc(CastBar.Icon, "SetTexture", Plates.DisplayCastIcon) -- sometime no icons is found, beta bug? so backdrop display update here
     
     -- UNIT NAME
-    Name:SetFont(C.Medias.Font, 10, "OUTLINE")
+    Name:SetFont(FontName, 10, "OUTLINE")
     hooksecurefunc(Name, "Show", Plates.SetName)
     
     -- WILL DO A BETTER VISUAL FOR THIS LATER
@@ -181,6 +183,9 @@ function Plates:Enable()
     
     -- Hide the option to rescale, because we will do it from Tukui settings.
     InterfaceOptionsNamesPanelUnitNameplatesMakeLarger:Hide()
+    
+    -- Set the Width of NamePlate
+    C_NamePlate.SetNamePlateOtherSize(C.NamePlates.Width, 45)
 end
 
 T["NamePlates"] = Plates

@@ -28,6 +28,10 @@ function Experience:SetTooltip()
         
         Current, Max = Experience:GetExperience()
         
+        if Max == 0 then
+            return
+        end
+        
         GameTooltip:AddLine(string.format("|cff0090FF"..XP..": %d / %d (%d%% - %d/%d)|r", Current, Max, Current / Max * 100, Bars - (Bars * (Max - Current) / Max), Bars))
         
         if (IsRested == 1 and Rested) then
@@ -35,6 +39,10 @@ function Experience:SetTooltip()
         end
     elseif BarType == "ARTIFACT" then
         Current, Max = Experience:GetArtifact()
+        
+        if Max == 0 then
+            return
+        end
         
         GameTooltip:AddLine(string.format("|cffe6cc80"..ARTIFACT_POWER..": %d / %d (%d%% - %d/%d)|r", Current, Max, Current / Max * 100, Bars - (Bars * (Max - Current) / Max), Bars))
     else
@@ -44,9 +52,14 @@ function Experience:SetTooltip()
         
         Current, Max = Experience:GetHonor()
         
-        GameTooltip:AddLine(string.format("|cffee2222"..HONOR..": %d / %d (%d%% - %d/%d)|r", Current, Max, Current / Max * 100, Bars - (Bars * (Max - Current) / Max), Bars))
-        GameTooltip:AddLine(string.format("|cffcccccc"..RANK..": %d / %d|r", Level, LevelMax))
-        GameTooltip:AddLine(string.format("|cffcccccc"..PVP_PRESTIGE_RANK_UP_TITLE..": %d|r", Prestige))
+        if Max == 0 then
+            GameTooltip:AddLine(PVP_HONOR_PRESTIGE_AVAILABLE)
+            GameTooltip:AddLine(PVP_HONOR_XP_BAR_CANNOT_PRESTIGE_HERE) 
+        else
+            GameTooltip:AddLine(string.format("|cffee2222"..HONOR..": %d / %d (%d%% - %d/%d)|r", Current, Max, Current / Max * 100, Bars - (Bars * (Max - Current) / Max), Bars))
+            GameTooltip:AddLine(string.format("|cffcccccc"..RANK..": %d / %d|r", Level, LevelMax))
+            GameTooltip:AddLine(string.format("|cffcccccc"..PVP_PRESTIGE_RANK_UP_TITLE..": %d|r", Prestige))
+        end
     end
 
     GameTooltip:Show()
