@@ -24,45 +24,45 @@ local PixelFont = CreateFont("TukuiPixelFont")
 PixelFont:SetFont(C["Medias"].PixelFont, 12, "MONOCHROMEOUTLINE")
 
 local TextureTable = {
-    ["Blank"] = "Interface\\BUTTONS\\WHITE8X8.tga",
-    ["Tukui"] = C.Medias.Normal,
+	["Blank"] = "Interface\\BUTTONS\\WHITE8X8.tga",
+	["Tukui"] = C.Medias.Normal,
 }
 
 local FontTable = {
-    ["Tukui"] = "TukuiFont",
-    ["Tukui Outline"] = "TukuiFontOutline",
-    ["Tukui UF"] = "TukuiUFFont",
-    ["Tukui UF Outline"] = "TukuiUFFontOutline",
-    ["Pixel"] = "TukuiPixelFont",
-    ["Game Font"] = "GameFontWhite",
+	["Tukui"] = "TukuiFont",
+	["Tukui Outline"] = "TukuiFontOutline",
+	["Tukui UF"] = "TukuiUFFont",
+	["Tukui UF Outline"] = "TukuiUFFontOutline",
+	["Pixel"] = "TukuiPixelFont",
+	["Game Font"] = "GameFontWhite",
 }
 
 T.GetFont = function(font)
-    if FontTable[font] then
-        return FontTable[font]
-    else
-        return FontTable["Tukui"] -- Return something to prevent errors
-    end
+	if FontTable[font] then
+		return FontTable[font]
+	else
+		return FontTable["Tukui"] -- Return something to prevent errors
+	end
 end
 
 T.GetTexture = function(texture)
-    if TextureTable[texture] then
-        return TextureTable[texture]
-    else
-        return TextureTable["Blank"] -- Return something to prevent errors
-    end
+	if TextureTable[texture] then
+		return TextureTable[texture]
+	else
+		return TextureTable["Blank"] -- Return something to prevent errors
+	end
 end
 
 function TukuiMedia:RegisterTexture(name, path)
-    if (not TextureTable[name]) then
-        TextureTable[name] = path
-    end
+	if (not TextureTable[name]) then
+		TextureTable[name] = path
+	end
 end
 
 function TukuiMedia:RegisterFont(name, path)
-    if (not FontTable[name]) then
-        FontTable[name] = path
-    end
+	if (not FontTable[name]) then
+		FontTable[name] = path
+	end
 end
 
 T["Media"] = TukuiMedia

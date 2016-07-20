@@ -5,16 +5,16 @@ local Movers = T["Movers"]
 local VehicleIndicator = CreateFrame("Frame")
 
 function VehicleIndicator:Enable()
-    local Indicator = VehicleSeatIndicator
+	local Indicator = VehicleSeatIndicator
 
-    Indicator:ClearAllPoints()
-    Indicator:SetParent(UIParent)
-    Indicator:SetPoint("BOTTOM", 0, T.ScreenHeight / 4)
+	Indicator:ClearAllPoints()
+	Indicator:SetParent(UIParent)
+	Indicator:SetPoint("BOTTOM", 0, T.ScreenHeight / 4)
 
-    -- This will block UIParent_ManageFramePositions() to be executed
-    Indicator.IsShown = function() return false end
+	-- This will block UIParent_ManageFramePositions() to be executed
+	Indicator.IsShown = function() return false end
 
-    Movers:RegisterFrame(Indicator)
+	Movers:RegisterFrame(Indicator)
 end
 
 Miscellaneous.VehicleIndicator = VehicleIndicator

@@ -3,16 +3,16 @@ local Battle = CreateFrame("Frame")
 local PetBattleFrame = PetBattleFrame
 
 function Battle:Enable()
-    PetBattleFrame:StripTextures()
+	PetBattleFrame:StripTextures()
 
-    self:SkinUnitFrames()
-    self:AddUnitFramesHooks()
-    self:SkinTooltips()
-    self:AddTooltipsHooks()
-    self:SkinPetSelection()
-    self:AddActionBar()
-    self:SkinActionBar()
-    self:AddActionBarHooks()
+	self:SkinUnitFrames()
+	self:AddUnitFramesHooks()
+	self:SkinTooltips()
+	self:AddTooltipsHooks()
+	self:SkinPetSelection()
+	self:AddActionBar()
+	self:SkinActionBar()
+	self:AddActionBarHooks()
 end
 
 T["PetBattles"] = Battle

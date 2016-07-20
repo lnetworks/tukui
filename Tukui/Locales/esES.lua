@@ -1,7 +1,7 @@
 local T, C, L = select(2, ...):unpack()
 
 if (GetLocale() ~= "esES") then
-    return
+	return
 end
 
 ------------------------------------------------
@@ -109,17 +109,17 @@ L.DataText.CartControl = "Carts Controlled:"
 L.DataText.VictoryPts = "Victory Points:"
 L.DataText.OrbPossession = "Orb Possessions:"
 L.DataText.Slots = {
-    [1] = {1, "Head", 1000},
-    [2] = {3, "Shoulder", 1000},
-    [3] = {5, "Chest", 1000},
-    [4] = {6, "Waist", 1000},
-    [5] = {9, "Wrist", 1000},
-    [6] = {10, "Hands", 1000},
-    [7] = {7, "Legs", 1000},
-    [8] = {8, "Feet", 1000},
-    [9] = {16, "Main Hand", 1000},
-    [10] = {17, "Off Hand", 1000},
-    [11] = {18, "Ranged", 1000}
+	[1] = {1, "Head", 1000},
+	[2] = {3, "Shoulder", 1000},
+	[3] = {5, "Chest", 1000},
+	[4] = {6, "Waist", 1000},
+	[5] = {9, "Wrist", 1000},
+	[6] = {10, "Hands", 1000},
+	[7] = {7, "Legs", 1000},
+	[8] = {8, "Feet", 1000},
+	[9] = {16, "Main Hand", 1000},
+	[10] = {17, "Off Hand", 1000},
+	[11] = {18, "Ranged", 1000}
 }
 
 ------------------------------------------------

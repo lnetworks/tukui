@@ -16,7 +16,7 @@
    local Assistant = self:CreateTexture(nil, "OVERLAY")
    Assistant:SetSize(16, 16)
    Assistant:SetPoint('TOP', self)
-
+   
    -- Register it with oUF
    self.Assistant = Assistant
 
@@ -28,84 +28,84 @@ local parent, ns = ...
 local oUF = ns.oUF
 
 local Update = function(self, event)
-    local assistant = self.Assistant
+	local assistant = self.Assistant
 
-    --[[ :PreUpdate()
+	--[[ :PreUpdate()
 
-     Called before the element has been updated.
+	 Called before the element has been updated.
 
-     Arguments
+	 Arguments
 
-     self - The Assistant element.
-    ]]
-    if(assistant.PreUpdate) then
-        assistant:PreUpdate()
-    end
+	 self - The Assistant element.
+	]]
+	if(assistant.PreUpdate) then
+		assistant:PreUpdate()
+	end
 
-    local unit = self.unit
-    local isAssistant = UnitInRaid(unit) and UnitIsGroupAssistant(unit) and not UnitIsGroupLeader(unit)
-    if(isAssistant) then
-        assistant:Show()
-    else
-        assistant:Hide()
-    end
+	local unit = self.unit
+	local isAssistant = UnitInRaid(unit) and UnitIsGroupAssistant(unit) and not UnitIsGroupLeader(unit)
+	if(isAssistant) then
+		assistant:Show()
+	else
+		assistant:Hide()
+	end
 
-    --[[ :PostUpdate(isAssistant)
+	--[[ :PostUpdate(isAssistant)
 
-     Called after the element has been updated.
+	 Called after the element has been updated.
 
-     Arguments
+	 Arguments
 
-     self        - The Assistant element.
-     isAssistant - A boolean holding whether the unit is a raid officer or not.
-    ]]
-    if(assistant.PostUpdate) then
-        return assistant:PostUpdate(isAssistant)
-    end
+	 self        - The Assistant element.
+	 isAssistant - A boolean holding whether the unit is a raid officer or not.
+	]]
+	if(assistant.PostUpdate) then
+		return assistant:PostUpdate(isAssistant)
+	end
 end
 
 local Path = function(self, ...)
-    --[[ :Override(self, event, ...)
+	--[[ :Override(self, event, ...)
 
-     Used to completely override the internal update function. Removing the
-     table key entry will make the element fall-back to its internal function
-     again.
+	 Used to completely override the internal update function. Removing the
+	 table key entry will make the element fall-back to its internal function
+	 again.
 
-     Arguments
+	 Arguments
 
-     self  - The Assistant element.
-     event - The UI event that fired.
-     ...   - A vararg with the arguments that accompany the event.
-    ]]
-    return (self.Assistant.Override or Update) (self, ...)
+	 self  - The Assistant element.
+	 event - The UI event that fired.
+	 ...   - A vararg with the arguments that accompany the event.
+	]]
+	return (self.Assistant.Override or Update) (self, ...)
 end
 
 local ForceUpdate = function(element)
-    return Path(element.__owner, 'ForceUpdate')
+	return Path(element.__owner, 'ForceUpdate')
 end
 
 local Enable = function(self)
-    local assistant = self.Assistant
-    if(assistant) then
-        self:RegisterEvent("GROUP_ROSTER_UPDATE", Path, true)
+	local assistant = self.Assistant
+	if(assistant) then
+		self:RegisterEvent("GROUP_ROSTER_UPDATE", Path, true)
 
-        if(assistant:IsObjectType"Texture" and not assistant:GetTexture()) then
-            assistant:SetTexture[[Interface\GroupFrame\UI-Group-AssistantIcon]]
-        end
+		if(assistant:IsObjectType"Texture" and not assistant:GetTexture()) then
+			assistant:SetTexture[[Interface\GroupFrame\UI-Group-AssistantIcon]]
+		end
 
-        assistant.__owner = self
-        assistant.ForceUpdate = ForceUpdate
+		assistant.__owner = self
+		assistant.ForceUpdate = ForceUpdate
 
-        return true
-    end
+		return true
+	end
 end
 
 local Disable = function(self)
-    local assistant = self.Assistant
-    if(assistant) then
-        self:UnregisterEvent("GROUP_ROSTER_UPDATE", Path)
-        assistant:Hide()
-    end
+	local assistant = self.Assistant
+	if(assistant) then
+		self:UnregisterEvent("GROUP_ROSTER_UPDATE", Path)
+		assistant:Hide()
+	end
 end
 
 oUF:AddElement('Assistant', Path, Enable, Disable)

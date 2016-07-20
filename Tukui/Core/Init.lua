@@ -11,7 +11,7 @@ Engine[3] = {}
 Engine[4] = {}
 
 function Engine:unpack()
-    return self[1], self[2], self[3], self[4]
+	return self[1], self[2], self[3], self[4]
 end
 
 Engine[1].Resolution = GetCVar("gxWindowedResolution")

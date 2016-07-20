@@ -9,44 +9,44 @@ local Active = false
 local CurrentFrame
 
 TukuiDT.Toggle = function(self, object)
-    CurrentFrame:SetData(object)
+	CurrentFrame:SetData(object)
 end
 
 TukuiDT.Remove = function()
-    CurrentFrame:RemoveData()
+	CurrentFrame:RemoveData()
 end
 
 local OnMouseDown = function(self)
-    CurrentFrame = self
+	CurrentFrame = self
 
-    EasyMenu(Menu, MenuFrame, "cursor", 0 , 0, "MENU", 2)
+	EasyMenu(Menu, MenuFrame, "cursor", 0 , 0, "MENU", 2)
 end
 
 function TukuiDT:ToggleDataPositions()
-    if Active then
-        for i = 1, self.NumAnchors do
-            local Frame = Anchors[i]
+	if Active then
+		for i = 1, self.NumAnchors do
+			local Frame = Anchors[i]
 
-            Frame:EnableMouse(false)
-            Frame.Tex:SetColorTexture(0.2, 1, 0.2, 0)
-        end
+			Frame:EnableMouse(false)
+			Frame.Tex:SetColorTexture(0.2, 1, 0.2, 0)
+		end
 
-        Active = false
-    else
-        for i = 1, self.NumAnchors do
-            local Frame = Anchors[i]
+		Active = false
+	else
+		for i = 1, self.NumAnchors do
+			local Frame = Anchors[i]
 
-            Frame:EnableMouse(true)
-            Frame.Tex:SetColorTexture(0.2, 1, 0.2, 0.2)
-            Frame:SetScript("OnMouseDown", OnMouseDown)
-        end
+			Frame:EnableMouse(true)
+			Frame.Tex:SetColorTexture(0.2, 1, 0.2, 0.2)
+			Frame:SetScript("OnMouseDown", OnMouseDown)
+		end
 
-        Active = true
-    end
+		Active = true
+	end
 end
 
 function TukuiDT:AddRemove()
-    -- Add a remove button
-    tinsert(Menu, {text = "", notCheckable = true})
-    tinsert(Menu, {text = "|cffFF0000"..REMOVE.."|r", notCheckable = true, func = TukuiDT.Remove})
+	-- Add a remove button
+	tinsert(Menu, {text = "", notCheckable = true})
+	tinsert(Menu, {text = "|cffFF0000"..REMOVE.."|r", notCheckable = true, func = TukuiDT.Remove})
 end

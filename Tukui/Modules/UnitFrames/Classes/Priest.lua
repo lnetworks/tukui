@@ -6,7 +6,7 @@ local TukuiUnitFrames = T["UnitFrames"]
 local Class = select(2, UnitClass("player"))
 
 if (Class ~= "PRIEST") then
-    return
+	return
 end
 
 TukuiUnitFrames.AddClassFeatures["PRIEST"] = function(self)

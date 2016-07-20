@@ -15,11 +15,11 @@ Please do not edit settings this way ...
 
 ------------------------------------------------------------------------------------------
 C["UnitFrames"] = {
-    ["Font"] = "Pixel",
-    ["CombatLog"] = true,
-    ["DarkTheme"] = true,
-    ["HealthTexture"] = "Dajova",
-    ["PowerTexture"] = "Dajova",
+	["Font"] = "Pixel",
+	["CombatLog"] = true,
+	["DarkTheme"] = true,
+	["HealthTexture"] = "Dajova",
+	["PowerTexture"] = "Dajova",
 }
 ------------------------------------------------------------------------------------------
 
